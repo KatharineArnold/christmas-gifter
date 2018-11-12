@@ -1,0 +1,46 @@
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+
+
+class NavBar extends Component {
+
+
+    render() {
+
+
+        let content = (
+            <li className="nav-item">
+                <a className="nav-link" href="/auth/google">Login</a>
+            </li>
+        );
+        if (this.props.user) {
+            content = [
+                <li className="nav-item" key="1">
+                    <span className="navbar-text">Hello, {this.props.user.givenName}</span>
+                </li>,
+                <li className="nav-item" key="2">
+                    <img
+                        style={{ borderRadius: '50%', padding: '8px 8px' }}
+                        src={this.props.user.imageURL}
+                        alt="User profile"
+                    />
+                </li>,
+                <li className="nav-item" key="3">
+                    <a className="nav-link" href="/auth/logout">Logout</a>
+                </li>
+            ];
+        }
+        return (
+            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                <Link className="navbar-brand" to="/">
+                    Christmas Gifter
+                                </Link>
+                <ul className="navbar-nav">{content}</ul>
+            </nav>
+        );
+    };
+}
+
+
+
+export default NavBar;

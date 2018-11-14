@@ -35,7 +35,8 @@ passport.use(new GoogleStrategy({
                         givenName: profile.name.givenName,
                         familyName: profile.name.familyName,
                         imageURL: imageUrl,
-                        address: ''
+                        matched: null,
+                        match: ''
                     })
                         .save()
                         .then(newUser => {
@@ -54,7 +55,6 @@ router.get('/google', passport.authenticate('google', {
 
 router.get('/google/callback', passport.authenticate('google'), (req, res) => {
     res.redirect('/');
-    // res.redirect('/auth/current_user');
 });
 
 router.get('/current_user', (req, res) => {

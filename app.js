@@ -33,8 +33,8 @@ app.use(express.static(path.join(__dirname, 'build')));
 
 
 //add routes here
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/api', indexRouter);
+app.use('/api/users', usersRouter);
 app.use('/auth', authRouter);
 
 app.get('*', (req, res) => {
@@ -54,7 +54,7 @@ app.use(function (err, req, res, next) {
 
 
 // If deployed, use the deployed database. Otherwise use the local mongoHeadlines database
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/pollPal";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/christmasGifter";
 
 // Set mongoose to leverage built in JavaScript ES6 Promises
 // Connect to the Mongo DB

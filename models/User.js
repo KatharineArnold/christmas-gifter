@@ -20,8 +20,11 @@ const UserSchema = new Schema({
     imageURL: {
         type: String,
     },
-    address: {
+    match: {
         type: String
+    },
+    matched: {
+        type: Boolean
     },
 });
 

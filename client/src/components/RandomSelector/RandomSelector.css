@@ -1,0 +1,21 @@
+.match, .btn{
+    color: white;
+}
+
+.reveal{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.revealBtn{
+    color: white;
+    background-color: green;
+    border: 2px, solid white;
+}
+
+.revealBtn:Hover{
+    background-color: green;
+color: red;
+}
+
+

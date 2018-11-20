@@ -12,6 +12,7 @@ const passport = require('passport');
 //add routers here
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var giftersRouter = require('./routes/gifters');
 const authRouter = require('./routes/auth');
 
 
@@ -35,6 +36,7 @@ app.use(express.static(path.join(__dirname, 'build')));
 //add routes here
 app.use('/api', indexRouter);
 app.use('/api/users', usersRouter);
+app.use('/api/gifters', giftersRouter);
 app.use('/auth', authRouter);
 
 app.get('*', (req, res) => {

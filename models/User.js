@@ -26,6 +26,8 @@ const UserSchema = new Schema({
     matched: {
         type: Boolean
     },
+    // wishItems: [WishItem],
+
 });
 
 

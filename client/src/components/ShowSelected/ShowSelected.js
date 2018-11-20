@@ -5,8 +5,9 @@ import "./ShowSelected.css";
 class ShowSelected extends Component {
 
     render() {
-        return (<div>
-            <h2>You will be helping Santa shop for {this.props.match}</h2>
+        return (<div className="showSelected">
+            <h2 className="match">You will be helping Santa shop for: </h2>
+            <h1 className="match">{this.props.match}</h1>
         </div>)
     }
 

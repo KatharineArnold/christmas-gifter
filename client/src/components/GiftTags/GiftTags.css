@@ -24,6 +24,13 @@
       -webkit-perspective: 800px;
       perspective: 800px;
   }
+  .tag-container2{
+margin-left: 200px; 
+ }
+  .tag-container1{
+margin-right: 200px; 
+ }
+
   
   .tag {
       width: 100%;

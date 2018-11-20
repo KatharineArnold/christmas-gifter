@@ -1,0 +1,11 @@
+.list-group{
+    width: 300px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.active{
+    background-color: green !important;
+    border: solid green !important;
+    color: white;
+}

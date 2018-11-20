@@ -12,15 +12,15 @@ class GiftTags extends Component {
         let content = (
 
             <div className="container">
-                <div className="tags">
+                {/* <div className="tags">
 
-                    <div className="tag-container">
+                    <div className="tag-container tag-container1">
                         <div className="tag">
 
                             <div className="tag-side tag-1-side">
                                 <div className="tag-1-top"></div>
                                 <div className="tag-text tag-1-text">
-                                    Merry<br />Christmas
+                                    Seasons<br />Greetings
                     <div className="rule-shape rule-red">&#x02605;</div>
                                 </div>
                             </div>
@@ -36,27 +36,9 @@ class GiftTags extends Component {
                         </div>
                     </div>
 
-                    <div className="tag-container">
-                        <div className="tag">
 
-                            <div className="tag-side tag-3-side">
-                                <div className="tag-text tag-3-text">
-                                    Feliz<br />Navidad
-                    <div className="rule-shape">&#10052;</div>
-                                </div>
-                            </div>
 
-                            <div className="tag-side tag-3-side is-back">
-                                <div className="tag-text tag-3-text">
-                                    Prospero Año Nuevo
-                    <div className="rule-shape">&#10052;</div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div className="tag-container">
+                    <div className="tag-container tag-container2">
                         <div className="tag">
 
                             <div className="tag-side tag-2-side">
@@ -76,7 +58,7 @@ class GiftTags extends Component {
                         </div>
                     </div>
 
-                </div>
+                </div> */}
             </div>
         )
 

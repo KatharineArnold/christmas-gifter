@@ -11,10 +11,10 @@ class NavBar extends Component {
 
         let content = (
             <li className="nav-item">
-                <button className="btn btn-danger btn-lg"><a className="loginBtn nav-link" href="/auth/google">Login To Enter Gifter 2018!</a></button>
+                {/* <button className="btn btn-danger btn-lg"><a className="loginBtn nav-link" href="/auth/google">Login To Enter Gifter 2018!</a></button> */}
             </li>
         );
-        if (this.props.user) {
+        if (this.props.gifter) {
             content = [
                 <li className="nav-item" key="1">
                     <span className="navbar-text "> view your matches wish list</span>
@@ -41,7 +41,7 @@ class NavBar extends Component {
         return (
 
             <nav className="navbar navbar-expand-lg  sticky-top">
-                <Link className="navbar-brand" to="/">Christmas Gifter</Link>
+                <Link className="navbar-brand" to="#">Christmas Gifter</Link>
                 <button className="navbar-toggler "
                     type="button" data-toggle="collapse"
                     data-target="#navbarNav"

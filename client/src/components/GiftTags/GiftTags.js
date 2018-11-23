@@ -1,10 +1,29 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 import "./GiftTags.css"
 import RandomSelector from '../RandomSelector/RandomSelector';
 
 
 class GiftTags extends Component {
+
+    state = {
+        gifter: null
+    }
+
+    componentDidMount() {
+        const { name } = this.props.match.params;
+        axios.get(`/api/gifters?name=${name}`).then((res) => {
+            this.setState({ gifter: res.data[0] });
+        });
+    }
+
+    updateGifter = (updatedGifter) => {
+        axios.put("/api/gifters/" + this.state.gifter._id, updatedGifter).then(({ data }) => {
+            this.setState({ gifter: data });
+        });
+    }
+
 
 
     render() {
@@ -62,9 +81,15 @@ class GiftTags extends Component {
             </div>
         )
 
-        if (this.props.user) {
+        if (this.state.gifter) {
             content = [
-                <RandomSelector getRandom={this.props.getRandom} matched={this.props.matched} updateUser={this.props.updateUser} user={this.props.user}></RandomSelector>
+                <RandomSelector
+                    getRandom={this.props.getRandom}
+                    matched={this.props.matched}
+                    updateUser={this.props.updateUser}
+                    user={this.props.user}
+                    gifter={this.state.gifter}
+                    updateGifter={this.updateGifter}></RandomSelector>
 
             ]
 

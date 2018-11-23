@@ -14,41 +14,16 @@ class App extends Component {
   state = {
     user: null,
     matched: null,
-    gifter: null
+    // what are gifters doing here??
   };
 
-  getRandom = () => {
-    const family = ["Gina", "Keith", "Angela", "Matt", "Katharine"];
 
-    let yourMatch = family[Math.floor(Math.random() * family.length)];
-
-    if (this.state.user.name === "gina") {
-      yourMatch = "Alex"
-    }
-    if (this.state.user.name === "Matt" && yourMatch === "Katharine") {
-      this.getRandom()
-    }
-    if (this.state.user.name === "Katharine" && yourMatch === "Matt") {
-      this.getRandom()
-    }
-    if (this.state.user.name === "Keith" && yourMatch === "Gina") {
-      this.getRandom()
-    }
-    if (this.state.user.name === "Alex" && yourMatch === "Angela") {
-      this.getRandom()
-    }
-
-    this.setState({ matched: true })
-    return yourMatch;
-
-  }
-
-
-  updateUser = (updatedUser) => {
-    axios.put("/api/users/" + this.state.user._id, updatedUser).then(({ data }) => {
-      this.setState({ user: data });
-    });
-  }
+  // does this need to be gifter now??
+  // updateUser = (updatedUser) => {
+  //   axios.put("/api/users/" + this.state.user._id, updatedUser).then(({ data }) => {
+  //     this.setState({ user: data });
+  //   });
+  // }
 
 
   componentDidMount() {
@@ -57,16 +32,20 @@ class App extends Component {
     });
   }
 
+
+
+  // where is the gifter??? need to pass to navbar
+
   render() {
     return (
       <Router>
         <div>
           <NavBar user={this.state.user} />
-          <GiftTags user={this.state.user} matched={this.state.matched} getRandom={this.getRandom} updateUser={this.updateUser}></GiftTags>
+          {/* <GiftTags user={this.state.user} matched={this.state.matched} getRandom={this.getRandom} updateUser={this.updateUser}></GiftTags> */}
+          <Route exact path={'/gifter/:name'} component={GiftTags} />
           <XmasContainer></XmasContainer>
-          <Switch>
-            {/* <Route exact path="/" component={} /> */}
-          </Switch>
+
+          {/* <Route exact path="/" component={} /> */}
         </div>
       </Router>
     );

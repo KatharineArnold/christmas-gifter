@@ -6,7 +6,8 @@ const Schema = mongoose.Schema;
 const GifterSchema = new Schema({
     name: String,
     match: String,
-    matched: Boolean
+    matched: Boolean,
+    doNotMatchWith: []
 });
 
 // This creates our model from the above schema, using mongoose's model method

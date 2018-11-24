@@ -97,7 +97,7 @@ class RandomSelector extends Component {
         if (!this.props.gifter.matched) {
             content = (
                 <div className="reveal">
-                    <button className="revealBtn btn btn-lg" onClick={this.handleSubmit}>Click to reveal your random match</button>
+                    <button className="revealBtn btn btn-lg" onClick={this.handleSubmit}>{this.props.gifter.name} click to reveal your random match</button>
                 </div>
             )
         }

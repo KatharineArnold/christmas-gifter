@@ -30,7 +30,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'build')));
+app.use(express.static(path.join(__dirname, 'client/build')));
 
 
 //add routes here
@@ -40,7 +40,7 @@ app.use('/api/gifters', giftersRouter);
 app.use('/auth', authRouter);
 
 app.get('*', (req, res) => {
-    res.sendFile('build/index.html', { root: global });
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
 });
 
 // error handler

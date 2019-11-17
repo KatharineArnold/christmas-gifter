@@ -1,12 +1,13 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import './RandomSelector.css';
-import ShowSelected from '../ShowSelected/ShowSelected';
-import axios from 'axios';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import "./RandomSelector.css";
+import ShowSelected from "../ShowSelected/ShowSelected";
+import axios from "axios";
+import XmasContainer from "../XmasContainer/XmasContainer";
 
 class RandomSelector extends Component {
   state = {
-    revealed: false,
+    revealed: false
   };
 
   handleSubmit = () => {
@@ -19,8 +20,13 @@ class RandomSelector extends Component {
     if (!this.state.revealed) {
       content = (
         <div className="reveal">
+          <h1 className="welcome"> ❅ Welcome {this.props.gifter.name}</h1>
+
           <button className="revealBtn btn btn-lg" onClick={this.handleSubmit}>
-            {this.props.gifter.name} click to reveal your random match
+            <h1 className="gift-box">
+              <h1>🎁</h1>
+              <h6>click me</h6>
+            </h1>
           </button>
         </div>
       );

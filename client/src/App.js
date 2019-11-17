@@ -2,11 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import NavBar from "./components/NavBar/NavBar";
 import GiftTags from "./components/GiftTags/GiftTags";
-import XmasContainer from "./components/XmasContainer/XmasContainer";
-import WishList from "./components/WishList/WishList";
-import WishListForm from "./components/WishListForm/WishListForm";
 
 class App extends Component {
   state = {

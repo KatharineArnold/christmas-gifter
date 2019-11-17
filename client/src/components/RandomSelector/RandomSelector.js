@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import "./RandomSelector.css";
 import ShowSelected from "../ShowSelected/ShowSelected";
 import axios from "axios";
-import XmasContainer from "../XmasContainer/XmasContainer";
 
 class RandomSelector extends Component {
   state = {

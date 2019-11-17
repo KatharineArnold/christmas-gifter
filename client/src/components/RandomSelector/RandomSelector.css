@@ -1,21 +1,30 @@
-.match, .btn{
-    color: white;
+.match,
+.btn {
+  color: white;
 }
 
-.reveal{
-    text-align: center;
-    margin-top: 30px;
+.reveal {
+  text-align: center;
+  /* margin-top: 30px; */
 }
 
-.revealBtn{
-    color: white;
-    background-color: green;
-    border: 2px, solid white;
+.revealBtn {
+  /* border: none; */
+  margin-top: 30px;
+  background-color: inherit;
+  padding: 14px 28px;
+  cursor: pointer;
+  display: inline-block;
 }
 
-.revealBtn:Hover{
-    background-color: green;
-color: red;
+.gift-box:hover {
+  box-shadow: inset 0 0 0 3px rgb(206, 36, 36);
 }
 
+.gift-box {
+  color: rgb(11, 73, 11);
+}
 
+.welcome {
+  color: rgb(11, 73, 11);
+}

@@ -3,7 +3,7 @@
   margin: 0;
 }
 
-body {
+html {
   background: url("../src/assets/pexels-photo-1303094.jpeg") no-repeat center
     center fixed;
   -webkit-background-size: cover;

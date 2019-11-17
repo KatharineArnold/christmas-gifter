@@ -31,20 +31,17 @@ class GiftTags extends Component {
     if (this.state.gifter) {
       content = [
         <div className=" countdown-selector">
-          <div className="col-5">
-            <RandomSelector
-              getRandom={this.props.getRandom}
-              matched={this.props.matched}
-              updateUser={this.props.updateUser}
-              user={this.props.user}
-              gifter={this.state.gifter}
-              updateGifter={this.updateGifter}
-            ></RandomSelector>
-          </div>
-          <div className="days-till col-4">
-            <h3>Days Until Christmas!</h3>
-            <Countdown date={"2019-12-25T01:02:03"} />
-          </div>
+          <RandomSelector
+            getRandom={this.props.getRandom}
+            matched={this.props.matched}
+            updateUser={this.props.updateUser}
+            user={this.props.user}
+            gifter={this.state.gifter}
+            updateGifter={this.updateGifter}
+          ></RandomSelector>
+
+          <h3 className="days-until">Days Until Christmas!</h3>
+          <Countdown date={"2019-12-25T01:02:03"} />
         </div>
       ];
     }

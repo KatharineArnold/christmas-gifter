@@ -19,8 +19,8 @@ class RandomSelector extends Component {
 
     if (!this.state.revealed) {
       content = (
-        <div className="reveal">
-          <h1 className="welcome"> ❅ Welcome {this.props.gifter.name}</h1>
+        <div className="reveal container">
+          <h1 className="welcome"> ❅ {this.props.gifter.name}</h1>
 
           <button className="revealBtn btn btn-lg" onClick={this.handleSubmit}>
             <h1 className="gift-box">

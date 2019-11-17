@@ -5,4 +5,9 @@
 
 .showSelected {
   margin-top: 20px;
+  text-align: center;
+}
+
+.match {
+  text-align: center;
 }

@@ -6,7 +6,7 @@ class ShowSelected extends Component {
   render() {
     return (
       <div className="showSelected">
-        <h2 className="match">Your Match:</h2>
+        <h2 className="match mx-auto">Your Match:</h2>
         <h1 className="match">{this.props.match}</h1>
       </div>
     );

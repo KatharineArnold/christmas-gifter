@@ -32,12 +32,11 @@ class App extends Component {
 
   render() {
     return (
-      <Router>
-        <div className="santa-container">
+      <div className="App">
+        <Router>
           <Route exact path={"/gifter/:name"} component={GiftTags} />
-          <XmasContainer></XmasContainer>
-        </div>
-      </Router>
+        </Router>
+      </div>
     );
   }
 }

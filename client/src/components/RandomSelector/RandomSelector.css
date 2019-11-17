@@ -10,9 +10,9 @@
 
 .revealBtn {
   /* border: none; */
-  margin-top: 30px;
+
   background-color: inherit;
-  padding: 14px 28px;
+
   cursor: pointer;
   display: inline-block;
 }
@@ -27,4 +27,5 @@
 
 .welcome {
   color: rgb(11, 73, 11);
+  margin-right: 30px;
 }

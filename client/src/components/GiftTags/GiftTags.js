@@ -30,7 +30,7 @@ class GiftTags extends Component {
 
     if (this.state.gifter) {
       content = [
-        <div className=" countdown-selector">
+        <div className="container">
           <RandomSelector
             getRandom={this.props.getRandom}
             matched={this.props.matched}

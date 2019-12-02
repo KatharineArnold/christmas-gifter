@@ -53,9 +53,10 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-// If deployed, use the deployed database. Otherwise use the local mongoHeadlines database
+// If deployed, use the deployed database. Otherwise use the local mongo database
 var MONGODB_URI =
-  process.env.MONGODB_URI || 'mongodb://localhost/christmasGifter';
+  process.env.MONGODB_URI ||
+  'mongodb://devUser:Password123@localhost:27017/dev';
 
 // Set mongoose to leverage built in JavaScript ES6 Promises
 // Connect to the Mongo DB

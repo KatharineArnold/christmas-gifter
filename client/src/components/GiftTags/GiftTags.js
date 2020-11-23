@@ -41,7 +41,7 @@ class GiftTags extends Component {
           ></RandomSelector>
 
           <h3 className='days-until'>Days Until Christmas!</h3>
-          <Countdown date={'2020-12-25T01:02:03'} />
+          <Countdown className='days-until' date={'2020-12-25T01:02:03'} />
         </div>,
       ];
     }

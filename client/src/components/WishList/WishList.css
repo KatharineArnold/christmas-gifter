@@ -1,11 +1,18 @@
-.list-group{
-    width: 300px;
-    text-align: center;
-    font-size: 25px;
+/* .list-group {
+  width: 300px;
+  text-align: center;
+  font-size: 25px;
 }
 
-.active{
-    background-color: green !important;
-    border: solid green !important;
-    color: white;
+.active {
+  background-color: green !important;
+  border: solid green !important;
+  color: white;
+} */
+
+.list-group {
+  max-width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 10%;
 }

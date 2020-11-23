@@ -28,4 +28,6 @@
 .welcome {
   color: rgb(11, 73, 11);
   margin-right: 30px;
+  margin-top: 10%;
+  font-weight: 900;
 }

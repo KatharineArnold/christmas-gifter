@@ -18,11 +18,11 @@ mongoose.connect(MONGODB_URI, {
 const newGifters = [
   { name: 'Matt', doNotMatchWith: ['Katharine', 'Matt'] },
   { name: 'Katharine', doNotMatchWith: ['Katharine', 'Matt'] },
-  { name: 'Alex', doNotMatchWith: ['Alex', 'Angela'] },
-  { name: 'Angela', doNotMatchWith: ['Alex', 'Angela'] },
+  { name: 'Alex', doNotMatchWith: ['Alex', 'Angela', 'Nicole'] },
+  { name: 'Angela', doNotMatchWith: ['Alex', 'Angela', 'Nicole'] },
   { name: 'Keith', doNotMatchWith: ['Keith', 'Gina'] },
   { name: 'Gina', doNotMatchWith: ['Keith', 'Gina'] },
-  { name: 'Nicole', doNotMatchWith: [] },
+  { name: 'Nicole', doNotMatchWith: ['Nicole', 'Angela', 'Alex'] },
 ];
 
 const run = async () => {
@@ -41,11 +41,11 @@ const run = async () => {
 
   const currentGifters = await db.Gifter.find();
   //create list of recipients
-  let recipients = currentGifters.map(g => g.name);
+  let recipients = currentGifters.map((g) => g.name);
   //randomly select recipient for each gifter
   for (const gifter of currentGifters) {
     const possibleMatches = recipients.filter(
-      recipient => !gifter.doNotMatchWith.includes(recipient)
+      (recipient) => !gifter.doNotMatchWith.includes(recipient)
     );
     if (possibleMatches.length === 0) {
       console.log('No matches for gifter.  Re-run script.');
@@ -53,7 +53,7 @@ const run = async () => {
     const index = Math.floor(Math.random() * possibleMatches.length);
 
     const match = possibleMatches[index];
-    recipients = recipients.filter(recipient => recipient !== match);
+    recipients = recipients.filter((recipient) => recipient !== match);
     await db.Gifter.updateOne({ _id: gifter._id }, { match });
     console.log(gifter.name, 'Matched');
   }
